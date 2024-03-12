@@ -1,0 +1,176 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Registrasi</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            fieldset {
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                padding: 10px;
+            }
+
+            legend {
+                font-weight: bold;
+            }
+
+            label {
+                display: inline-block;
+                width: 140px;
+                margin-bottom: 2px;
+            }
+
+            input[type="text"],
+            input[type="date"],
+            input[type="email"],
+            input[type="password"],
+            input[type="url"],
+            input[type="file"] {
+                width: 250px;
+                padding: 3px;
+                border-radius: 3px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+
+            textarea {
+                width: 90px;
+                height: 30px;
+                padding: 3px;
+                border-radius: 2px;
+                border: 1px solid #e0d7d7;
+                resize: none;
+            }
+            textarea {
+                height: 90px;
+                padding: 3px;
+                border-radius: 2px;
+                border: 1px solid #e0d7d7;
+                resize: vertical;
+            }
+            input[type="checkbox"] {
+                margin-right: 5px;
+            }
+
+            input[type="reset"],
+            input[type="submit"],
+            input[type="button"] {
+                padding: 8px 20px;
+                border: none;
+                border-radius: 5px; 
+                cursor: pointer;
+                background-color:  #007bff;
+                color: #fff;
+                font-size: 16px;
+            }
+
+            input[type="reset"]:hover,
+            input[type="submit"]:hover,
+            input[type="button"]:hover {
+                background-color: #0056b3;
+            }
+            
+            .file-info {
+                font-style: italic;
+                color: #667;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Form Registrasi</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Biodata</legend>
+                <p>
+                    <label for="nama">Nama Mahasiswa :</label>
+                    <input type="text" id="nama" name="nama" required>
+                </p>
+                <p>
+                    <label for="nim">No Induk Mahasiswa (NIM) :</label>
+                    <input type="text" id="nim" name="nim" required>
+                </p>
+                <p style="display: flex; align-items: flex-start;">
+                    <label for="alamat" style="flex: 00 140px;">Alamat Mahasiswa :</label>
+                    <textarea id="alamat" name="alamat" style="flex: 1;max-width: 400px;" required></textarea>
+                </p>
+                <p> 
+                    <label for=" for=tgl_lahir">Tanggal Lahir :</label>
+                    <input type="number" id="tgl_lahir_tanggal" name="tgl_lahir_tanggal" placeholder="Tanggal" min="1" max="31" required>
+                    <input type="number" id="tgl_lahir_bulan" name="tgl_lahir_bulan" placeholder="Bulan" min="1" max="12" required>
+                    <input type="number" id="tgl_lahir_tahun" name="tgl_lahir_tahun" placeholder="Tahun" min="1900" max="2100" required>
+                </p>
+                <p>
+                    <label for="jenis_kelamin">Jenis Kelamin :</label>
+                    <input type="radio" id="pria" name="jenis_kelamin" value="Pria" required>
+                    <label for="pria">Pria</label>
+                    <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita" required>
+                    <label for="Wanita">Wanita</label>
+                </p>
+                <p>
+                    <label for="foto">Upload Foto</label>
+                    <input type="file" id="file" name="file">
+                </p>
+                <p>
+                    <label for="website">URL Website</label>
+                    <input type="url" id="website" name="website">
+                </p>
+                <p>
+                    <label for="perguruan_tinggi">Perguruan Tinggi :</label>
+                    <input type="text" id="perguruan_tinggi" name="perguruan_tinggi" required>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Info Akun</legend>
+                <p>
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="username">Username :</label>
+                    <input type="text" id="username" name="username" required>
+                </p>
+                <p>
+                    <label for="password">Password :</label>
+                    <input type="password" id="password" name="password" required>
+                </p>
+                <p>
+                    <label for="ulangi_password">Ulangi Password :</label>
+                    <input type="password" id="ulangi_password" name="ulangi_password" required>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Kemampuan Dasar</legend>
+                <p>
+                    <input type="checkbox" id="html" name="html">
+                    <label for="html">HTML</label>
+                    <input type="checkbox" id="css" name="css">
+                    <label for="css">CSSL</label>
+                    <input type="checkbox" id="javascript" name="javascript">
+                    <label for="javascript">Javascript</label>
+                    <input type="checkbox" id="php" name="php">
+                    <label for="php">PHP</label>
+                    <input type="checkbox" id="mysql" name="mysql">
+                    <label for="mysql">MySQL</label>
+                    <input type="checkbox" id="laravel" name="laravel">
+                    <label for="laravel">Laravel</label>
+                    <input type="checkbox" id="react_native" name="react_native">
+                    <label for="react_native">React Native</label>
+                </p>
+            </fieldset>
+
+            <p>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+                <input type="button" value="Button">
+            </p>
+        </form>
+    </body>
+</html>
